@@ -1,2 +1,1 @@
-Data science portfolio
-[under construction]
+My Data Science and Analytics Portfolio
