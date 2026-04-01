@@ -142,7 +142,7 @@
     }
     .nav-items a {
       font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
@@ -304,6 +304,7 @@
       max-width: 560px;
       margin: 0 auto 36px;
       font-weight: 300;
+      font-size: 1.05rem;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.7s;
     }
@@ -443,7 +444,7 @@
       padding: 5px 0 5px 20px;
       position: relative;
       color: #9585b8;
-      font-size: 0.88rem;
+      font-size: 0.93rem;
       line-height: 1.65;
     }
     .exp-bullets li::before {
@@ -560,13 +561,39 @@
     }
 
     /* ───── PROJECTS ───── */
+    .proj-category {
+      margin-bottom: 48px;
+    }
+    .proj-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .proj-cat-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .proj-cat-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--cyan);
+    }
+    .proj-cat-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(99,179,237,0.25), transparent);
+    }
     .proj-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 14px;
     }
+    .proj-grid.single { grid-template-columns: 1fr; max-width: 460px; }
     .proj-card {
-      padding: 28px;
+      padding: 24px 28px;
       background: var(--card);
       border: 1px solid var(--border2);
       border-radius: 6px;
@@ -584,13 +611,13 @@
       margin-bottom: 10px;
     }
     .proj-name {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 500;
       line-height: 1.45;
       color: var(--star);
     }
     .proj-tech {
-      margin-top: 12px;
+      margin-top: 10px;
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
       color: var(--muted);
@@ -768,13 +795,13 @@
     </h1>
     <p class="hero-title">Sr. Data Scientist &amp; Analytics Engineer</p>
     <p class="hero-desc">
-      9+ years turning messy data into strategic intelligence. From Data Analytics to GenAI chat agents - I build ML systems that make decisions smarter.
+      9+ years turning messy data into strategic intelligence. From Data Analytics to GenAI chat agents — I build ML systems that make decisions smarter.
     </p>
     <div class="specialty-tags">
       <span class="spec-tag v">Machine Learning</span>
       <span class="spec-tag c">Generative AI</span>
       <span class="spec-tag r">RAG / LangChain</span>
-      <span class="spec-tag v">Data Analytics</span>
+      <span class="spec-tag v">Time Analytics</span>
     </div>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in Touch →</a>
@@ -970,30 +997,108 @@
     <h2 class="sec-title">Key Projects</h2>
     <div class="sec-line"></div>
   </div>
-  <div class="proj-grid">
-    <div class="proj-card">
-      <a href= "https://github.com/pgupta26dec/Multi-PDFs_ChatApp_AI-Agent">
-      <p class="proj-year">2025</p>
-      <p class="proj-name">Generative AI — MultiPDF Chat Agent</p>
-      <p class="proj-tech">LangChain · FAISS · Streamlit</p>
-      </a>
+
+  <!-- Generative AI -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">✨</span>
+      <span class="proj-cat-title">Generative AI</span>
+      <div class="proj-cat-line"></div>
     </div>
-    <div class="proj-card">
-      <p class="proj-year">2023</p>
-      <p class="proj-name">UK Economic Indicators Dashboard</p>
-      <p class="proj-tech">R · Azure Databricks · Visualization</p>
-    </div>
-    <div class="proj-card">
-      <p class="proj-year">2021</p>
-      <p class="proj-name">Survivorship Bias in MS MARCO Dataset</p>
-      <p class="proj-tech">PyTerrier · NLP · Information Retrieval</p>
-    </div>
-    <div class="proj-card">
-      <p class="proj-year">2021</p>
-      <p class="proj-name">Image Classification via Facial Recognition</p>
-      <p class="proj-tech">OpenCV · AWS · Deep Learning</p>
+    <div class="proj-grid single">
+      <div class="proj-card">
+        <p class="proj-year">2025</p>
+        <p class="proj-name">MultiPDF Chat Agent</p>
+        <p class="proj-tech">LangChain · FAISS · Streamlit · RAG</p>
+      </div>
     </div>
   </div>
+
+  <!-- Data Analytics -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">📊</span>
+      <span class="proj-cat-title">Data Analytics</span>
+      <div class="proj-cat-line"></div>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <p class="proj-year">2024</p>
+        <p class="proj-name">Property and Resident Management</p>
+        <p class="proj-tech">Apache Superset · Snowflake · dbt</p>
+      </div>
+      <div class="proj-card">
+        <p class="proj-year">2023</p>
+        <p class="proj-name">UK Economic Indicators Dashboard</p>
+        <p class="proj-tech">R · Azure Databricks · Visualization</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SQL Projects -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">🗄️</span>
+      <span class="proj-cat-title">SQL Projects</span>
+      <div class="proj-cat-line"></div>
+    </div>
+    <div class="proj-grid single">
+      <div class="proj-card">
+        <p class="proj-year">2023</p>
+        <p class="proj-name">SQL Data Warehouse Project</p>
+        <p class="proj-tech">SQL · Snowflake · Data Modelling · ETL</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Machine Learning -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">🤖</span>
+      <span class="proj-cat-title">Machine Learning</span>
+      <div class="proj-cat-line"></div>
+    </div>
+    <div class="proj-grid single">
+      <div class="proj-card">
+        <p class="proj-year">2021</p>
+        <p class="proj-name">Image Classification via Facial Recognition</p>
+        <p class="proj-tech">OpenCV · AWS · Scikit-Learn</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Learning -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">🧠</span>
+      <span class="proj-cat-title">Deep Learning</span>
+      <div class="proj-cat-line"></div>
+    </div>
+    <div class="proj-grid single">
+      <div class="proj-card">
+        <p class="proj-year">2022</p>
+        <p class="proj-name">Potato Disease Classification using TensorFlow</p>
+        <p class="proj-tech">TensorFlow · CNN · Image Segmentation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun with Python -->
+  <div class="proj-category">
+    <div class="proj-cat-header">
+      <span class="proj-cat-icon">🐍</span>
+      <span class="proj-cat-title">Fun with Python</span>
+      <div class="proj-cat-line"></div>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <p class="proj-year">2021</p>
+        <p class="proj-name">Survivorship Bias in MS MARCO Dataset</p>
+        <p class="proj-tech">PyTerrier · NLP · Information Retrieval</p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <div class="divider"></div>
