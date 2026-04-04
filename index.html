@@ -362,6 +362,33 @@
       color: var(--muted);
     }
     .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+        .btn-resume {
+      border: 1px solid var(--rose);
+      color: #f9a8d4;
+      background: rgba(244,114,182,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-resume::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(244,114,182,0.18), rgba(139,92,246,0.12));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .btn-resume:hover::before { opacity: 1; }
+    .btn-resume:hover {
+      border-color: #f472b6;
+      color: #fce7f3;
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px rgba(244,114,182,0.3), 0 0 48px rgba(244,114,182,0.1);
+    }
+    @keyframes resumePulse {
+      0%, 100% { box-shadow: 0 0 8px rgba(244,114,182,0.4), 0 0 20px rgba(244,114,182,0.15); }
+      50% { box-shadow: 0 0 16px rgba(244,114,182,0.6), 0 0 36px rgba(244,114,182,0.25); }
+    }
+    .btn-resume { animation: resumePulse 2.8s ease infinite; }
 
     /* ───── SECTIONS ───── */
     .section {
